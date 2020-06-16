@@ -15,7 +15,14 @@
 
 <script>
 export default {
-  name: 'Banner'
+    name: 'Banner',
+    methods: {
+        blockCookies: function() {
+            window.YETT_BLACKLIST = [
+                /my-blacklisted-domain/,
+            ]
+        },
+    }
 }
 </script>
 
@@ -39,5 +46,37 @@ export default {
         position: relative;
         padding: 40px 40px 30px 40px;
         text-align: center;
+    }
+
+    .cookiebanner-box .cookiebanner-box__inner .title{
+        font-size: 35px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .cookiebanner-box .cookiebanner-box__inner .desc{
+        font-size: 13px;
+        line-height: 1.4;
+        color: white;
+    }
+
+    .cookiebanner-box .cookiebanner-box__inner img{
+        position: absolute;
+        width: 60px;
+        left: 0;
+        right: 0;
+        top: -30px;
+        margin: 0 auto;
+    }
+
+    .cookiebanner-box .cookiebanner-box__inner button {
+        text-transform: uppercase;
+        margin-top: 30px;
+        border: none;
+        background-color: white;
+        color: black;
+        font-weight: 800;
+        font-size: 15px;
+        padding: .6em 1em .4em;
     }
 </style>
