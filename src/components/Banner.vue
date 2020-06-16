@@ -79,4 +79,10 @@ export default {
         font-size: 15px;
         padding: .6em 1em .4em;
     }
+
+    .cookiebanner-box .cookiebanner-box__inner button:hover{
+        cursor: pointer;
+        color: black;
+        background-color: #fff200;
+    }
 </style>
